@@ -6,18 +6,35 @@
 
 ## Themes
 
+### Dark Themes
+
 <!-- Themes -->
 <div align='center'>
+
 
 `Dracula`
 
 <img src='./assets/images/dracula-screenshot.png' width="500" alt="dracula">
 
+`Nightfall`
+
+<img src='./assets/images/nightfall-screenshot.png' width="500" alt="dracula">
+
+
+</div>
+
+### Light Themes
+
+<!-- Themes -->
+<div align='center'>
+
 `Github`
 
 <img src='./assets/images/github-screenshot.png' width="500" alt="github">
 
+
 </div>
+
 
 ## Getting started
 
