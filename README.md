@@ -4,14 +4,16 @@
 <h3>THEIA THEME PACK</h3>
 </div>
 
+## Themes
+
 <!-- Themes -->
-<center>
+<div align='center'>
 
-|Dracula |
-|:---:|
-|<img src='./assets/images/dracula-screenshot.png' width="500">|
+`Dracula`
 
-</center>
+<img src='./assets/images/dracula-screenshot.png' width="500">
+
+</div>
 
 ## Getting started
 
