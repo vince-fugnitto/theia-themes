@@ -145,8 +145,8 @@ is not optimized for dense, information rich UIs.
   --theia-scrollbar-active-rail-color: transparent;
   /* Menu */
   --theia-menu-color0: var(--theia-layout-color0);
-  --theia-menu-color1: var(--theia-layout-color4);
-  --theia-menu-color2: var(--theia-layout-color1);
+  --theia-menu-color1: #06101C;
+  --theia-menu-color2: var(--theia-layout-color2);
   /* Statusbar */
   --theia-statusbar-color: var(--theia-layout-color0);
   --theia-statusBar-font-color: var(--theia-ui-font-color0);
