@@ -28,6 +28,13 @@
 <!-- Themes -->
 <div align='center'>
 
+`Aqua`
+
+<img src='./assets/images/aqua-screenshot.png' width="500" alt="aqua">
+
+
+<div align='center'>
+
 `Github`
 
 <img src='./assets/images/github-screenshot.png' width="500" alt="github">

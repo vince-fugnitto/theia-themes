@@ -14,21 +14,29 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { ContainerModule } from 'inversify';
-import { GithubTheme } from './github-theme';
-import { DraculaTheme } from './dracula-theme';
-import { NightfallTheme } from './nightfall-theme';
-import { AquaTheme } from './aqua-theme';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { Theme } from '@theia/core/lib/browser/theming';
+import { MonacoThemeRegistry } from '@theia/monaco/lib/browser/textmate/monaco-theme-registry';
 
-export default new ContainerModule(() => {
-    const themeService = ThemeService.get();
+const AQUA_CSS = require('../../src/browser/style/aqua.useable.css');
+const AQUA_JSON = MonacoThemeRegistry.SINGLETON.register(
+    require('../../src/browser/data/aqua.color-theme.json'), {}, 'aqua', 'vs').name!;
 
-    // Dark Themes
-    themeService.register(...DraculaTheme.themes);
-    themeService.register(...NightfallTheme.themes);
+export class AquaTheme {
 
-    // Light Themes
-    themeService.register(...GithubTheme.themes);
-    themeService.register(...AquaTheme.themes);
-});
+    static readonly aqua: Theme = {
+        id: 'aqua-theme',
+        label: 'Aqua Light Theme',
+        description: 'Aqua Light Theme',
+        editorTheme: AQUA_JSON,
+        activate() {
+            AQUA_CSS.use();
+        },
+        deactivate() {
+            AQUA_CSS.unuse();
+        }
+    }
+
+    static readonly themes: Theme[] = [
+        AquaTheme.aqua
+    ]
+}
