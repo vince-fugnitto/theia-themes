@@ -5,13 +5,13 @@
 </div>
 
 <!-- Themes -->
-<div align='center'>
+<center>
 
 |Dracula |
 |:---:|
 |<img src='./assets/images/dracula-screenshot.png' width="500">|
 
-</div>
+</center>
 
 ## Getting started
 
