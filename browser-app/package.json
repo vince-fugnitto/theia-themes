@@ -1,0 +1,63 @@
+{
+  "private": true,
+  "name": "browser-app",
+  "version": "0.0.0",
+  "dependencies": {
+    "@theia/callhierarchy": "next",
+    "@theia/console": "next",
+    "@theia/core": "next",
+    "@theia/cpp": "next",
+    "@theia/debug": "next",
+    "@theia/debug-nodejs": "next",
+    "@theia/editor": "next",
+    "@theia/editor-preview": "next",
+    "@theia/editorconfig": "next",
+    "@theia/extension-manager": "next",
+    "@theia/file-search": "next",
+    "@theia/filesystem": "next",
+    "@theia/getting-started": "next",
+    "@theia/git": "next",
+    "@theia/java": "next",
+    "@theia/java-debug": "next",
+    "@theia/json": "next",
+    "@theia/keymaps": "next",
+    "@theia/languages": "next",
+    "@theia/markers": "next",
+    "@theia/merge-conflicts": "next",
+    "@theia/messages": "next",
+    "@theia/metrics": "next",
+    "@theia/mini-browser": "next",
+    "@theia/monaco": "next",
+    "@theia/navigator": "next",
+    "@theia/outline-view": "next",
+    "@theia/output": "next",
+    "@theia/plugin-ext": "next",
+    "@theia/plugin-ext-vscode": "next",
+    "@theia/preferences": "next",
+    "@theia/preview": "next",
+    "@theia/process": "next",
+    "@theia/python": "next",
+    "@theia/search-in-workspace": "next",
+    "@theia/task": "next",
+    "@theia/terminal": "next",
+    "@theia/textmate-grammars": "next",
+    "@theia/tslint": "next",
+    "@theia/typehierarchy": "next",
+    "@theia/typescript": "next",
+    "@theia/userstorage": "next",
+    "@theia/variable-resolver": "next",
+    "@theia/workspace": "next",
+    "themes": "0.0.0"
+  },
+  "devDependencies": {
+    "@theia/cli": "next"
+  },
+  "scripts": {
+    "prepare": "theia build --mode development",
+    "start": "theia start",
+    "watch": "theia build --watch --mode development"
+  },
+  "theia": {
+    "target": "browser"
+  }
+}
