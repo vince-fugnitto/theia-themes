@@ -14,25 +14,29 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { ContainerModule } from 'inversify';
-import { ThemeService } from '@theia/core/lib/browser/theming';
+import { Theme } from '@theia/core/lib/browser/theming';
+import { MonacoThemeRegistry } from '@theia/monaco/lib/browser/textmate/monaco-theme-registry';
 
-import { AquaTheme } from './aqua-theme';
-import { GithubTheme } from './github-theme';
-import { DraculaTheme } from './dracula-theme';
-import { FacebookTheme } from './facebook-theme';
-import { NightfallTheme } from './nightfall-theme';
+const FACEBOOK_CSS = require('../../src/browser/style/facebook.useable.css');
+const FACEBOOK_JSON = MonacoThemeRegistry.SINGLETON.register(
+    require('../../src/browser/data/facebook.color-theme.json'), {}, 'facebook', 'vs-dark').name!;
 
-export default new ContainerModule(() => {
+export class FacebookTheme {
 
-    const themeService = ThemeService.get();
+    static readonly facebook: Theme = {
+        id: 'facebook-theme',
+        label: 'Facebook Theme',
+        description: 'Facebook Dark Theme',
+        editorTheme: FACEBOOK_JSON,
+        activate() {
+            FACEBOOK_CSS.use();
+        },
+        deactivate() {
+            FACEBOOK_CSS.unuse();
+        }
+    }
 
-    // Dark Themes
-    themeService.register(...DraculaTheme.themes);
-    themeService.register(...NightfallTheme.themes);
-    themeService.register(...FacebookTheme.themes);
-
-    // Light Themes
-    themeService.register(...GithubTheme.themes);
-    themeService.register(...AquaTheme.themes);
-});
+    static readonly themes: Theme[] = [
+        FacebookTheme.facebook,
+    ]
+}
