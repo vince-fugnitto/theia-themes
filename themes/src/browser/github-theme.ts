@@ -17,26 +17,26 @@
 import { Theme } from '@theia/core/lib/browser/theming';
 import { MonacoThemeRegistry } from '@theia/monaco/lib/browser/textmate/monaco-theme-registry';
 
-const DRACULA_CSS = require('../../src/browser/style/dracula.useable.css');
-const DRACULA_JSON = MonacoThemeRegistry.SINGLETON.register(
-    require('../../src/browser/data/dracula.color-theme.json'), {}, 'dracula', 'vs-dark').name!;
+const GITHUB_CSS = require('../../src/browser/style/github.useable.css');
+const GITHUB_JSON = MonacoThemeRegistry.SINGLETON.register(
+    require('../../src/browser/data/github.color-theme.json'), {}, 'github', 'vs').name!;
 
-export class DraculaTheme {
+export class GithubTheme {
 
-    static readonly dracula: Theme = {
-        id: 'dracula-theme',
-        label: 'Dracula Theme',
-        description: 'Dracula Dark Theme',
-        editorTheme: DRACULA_JSON,
+    static readonly github: Theme = {
+        id: 'github-theme',
+        label: 'Github Theme',
+        description: 'Github Light Theme',
+        editorTheme: GITHUB_JSON,
         activate() {
-            DRACULA_CSS.use();
+            GITHUB_CSS.use();
         },
         deactivate() {
-            DRACULA_CSS.unuse();
+            GITHUB_CSS.unuse();
         }
     }
 
     static readonly themes: Theme[] = [
-        DraculaTheme.dracula,
+        GithubTheme.github,
     ]
 }

@@ -17,8 +17,10 @@
 import { ContainerModule } from 'inversify';
 import { DraculaTheme } from './dracula-theme';
 import { ThemeService } from '@theia/core/lib/browser/theming';
+import { GithubTheme } from './github-theme';
 
 export default new ContainerModule(() => {
     const themeService = ThemeService.get();
     themeService.register(...DraculaTheme.themes);
+    themeService.register(...GithubTheme.themes);
 });

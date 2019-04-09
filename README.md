@@ -11,7 +11,11 @@
 
 `Dracula`
 
-<img src='./assets/images/dracula-screenshot.png' width="500">
+<img src='./assets/images/dracula-screenshot.png' width="500" alt="dracula">
+
+`Github`
+
+<img src='./assets/images/github-screenshot.png' width="500" alt="github">
 
 </div>
 
